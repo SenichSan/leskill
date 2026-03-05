@@ -39,3 +39,24 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+/* ═══════════════════════════════════════════
+   Marquee — infinite horizontal scroll
+   ═══════════════════════════════════════════ */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+  will-change: transform;
+}
